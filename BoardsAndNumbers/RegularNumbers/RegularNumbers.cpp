@@ -50,9 +50,12 @@ int algorithm_way(void)
         board.emplace_back(sum);
     } while (board.size() != 1);
 
-    std::cout << "Last number: " << board[0] << std::endl;
+    int last_number = board[0];
+    std::cout << "Last number: " << last_number << std::endl;
 
-    return board[0];
+    board.clear();
+
+    return last_number;
 }
 
 int math_way(void)
